@@ -1,0 +1,34 @@
+.habit-goals__form { display: grid; gap: 9px; margin-top: 20px; }
+.habit-goals__form > label { font-size: 0.78rem; font-weight: 800; }
+.habit-goals__goal-fields { display: grid; grid-template-columns: 0.7fr 1fr 1fr; gap: 7px; }
+.habit-goals__goal-fields input, .habit-goals__goal-fields select, .habit-goals__reminder input[type="time"] { min-width: 0; height: 42px; padding: 0 10px; border: 1px solid var(--gray); border-radius: 10px; color: var(--black); background: var(--white); font: inherit; font-size: 0.76rem; }
+.habit-goals__progress-copy { display: flex; justify-content: space-between; gap: 8px; margin-top: 6px; color: var(--gray); font-size: 0.72rem; }
+.habit-goals__progress-copy strong { color: var(--black); }
+.habit-goals__progress { height: 9px; overflow: hidden; border-radius: 999px; background: var(--lavender-light); }
+.habit-goals__progress span { display: block; height: 100%; border-radius: inherit; background: var(--lavender-dark); transition: width 0.3s ease; }
+.habit-goals__submit-row { display: flex; min-height: 36px; align-items: center; justify-content: space-between; gap: 8px; }
+.habit-goals__submit-row > span { color: var(--lavender-dark); font-size: 0.7rem; }
+.habit-goals__submit-row button { padding: 8px 13px; border: 0; border-radius: 999px; background: var(--lavender); font-size: 0.72rem; font-weight: 800; }
+.habit-goals__reminder { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px; margin-top: 15px; padding: 13px 0; border-top: 1px solid var(--lavender-light); border-bottom: 1px solid var(--lavender-light); }
+.habit-goals__reminder > div { display: grid; gap: 3px; }
+.habit-goals__reminder strong { font-size: 0.78rem; }
+.habit-goals__reminder > div > span { color: var(--gray); font-size: 0.68rem; }
+.habit-goals__reminder input[type="time"] { grid-column: 1 / -1; width: 100%; }
+.habit-goals__reminder input[type="time"]:disabled { opacity: 0.5; }
+.habit-goals__switch { position: relative; display: inline-flex; width: 42px; height: 24px; cursor: pointer; }
+.habit-goals__switch input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.habit-goals__switch > span[aria-hidden] { width: 100%; border-radius: 999px; background: var(--gray); transition: background 0.2s ease; }
+.habit-goals__switch > span[aria-hidden]::after { display: block; width: 18px; height: 18px; margin: 3px; border-radius: 50%; background: white; content: ''; transition: transform 0.2s ease; }
+.habit-goals__switch input:checked + span[aria-hidden] { background: var(--lavender-dark); }
+.habit-goals__switch input:checked + span[aria-hidden]::after { transform: translateX(18px); }
+.habit-goals__switch input:focus-visible + span[aria-hidden] { outline: 3px solid var(--lavender-dark); outline-offset: 3px; }
+.habit-goals__badges { margin-top: 19px; }
+.habit-goals__badges h3 { margin: 0 0 10px; font-size: 0.82rem; }
+.habit-goals__badges > div { display: flex; flex-wrap: wrap; gap: 7px; }
+.habit-goals__badges > div > span { display: flex; min-width: 48px; align-items: center; justify-content: center; gap: 4px; padding: 7px 9px; border-radius: 999px; color: var(--gray); background: var(--lavender-light); font-size: 0.7rem; font-weight: 800; }
+.habit-goals__badges > div > span.is-earned { color: var(--black); background: var(--lavender-light); }
+.habit-goals__badges strong { color: var(--lavender-dark); }
+@media (min-width: 600px) {
+  .habit-goals__reminder { grid-template-columns: 1fr auto auto; }
+  .habit-goals__reminder input[type="time"] { grid-column: auto; width: 115px; }
+}

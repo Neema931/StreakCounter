@@ -1,0 +1,145 @@
+{
+  "exercise": {
+    "tool": "workout",
+    "tip": "Make your next workout small enough that starting feels easy.",
+    "quote": "You do not have to be extreme, just consistent.",
+    "articles": [
+      { "id": "getting-started", "category": "Getting started", "title": "Build a movement habit that lasts", "summary": "Start with a realistic plan and let consistency grow before intensity.", "readMinutes": 4, "thumbnail": "🏃" },
+      { "id": "science-benefits", "category": "Science and benefits", "title": "Why regular movement matters", "summary": "A practical look at how everyday activity supports your wellbeing.", "readMinutes": 5, "thumbnail": "💪" },
+      { "id": "stay-consistent", "category": "Tips to stay consistent", "title": "Make exercise easier to begin", "summary": "Use cues, preparation, and short sessions to remove friction.", "readMinutes": 3, "thumbnail": "👟" },
+      { "id": "common-mistakes", "category": "Common mistakes", "title": "Avoid the all-or-nothing trap", "summary": "A missed session does not erase the progress you have made.", "readMinutes": 4, "thumbnail": "🌱" }
+    ]
+  },
+  "reading": {
+    "tool": "reading",
+    "tip": "Leave your book somewhere you naturally pause during the day.",
+    "quote": "A little reading can open a very big world.",
+    "articles": [
+      { "id": "getting-started", "category": "Getting started", "title": "Make room for reading", "summary": "Find a small daily reading window that fits your routine.", "readMinutes": 4, "thumbnail": "📚" },
+      { "id": "science-benefits", "category": "Science and benefits", "title": "The benefits of a reading ritual", "summary": "How a regular reading practice can support focus and curiosity.", "readMinutes": 5, "thumbnail": "🧠" },
+      { "id": "stay-consistent", "category": "Tips to stay consistent", "title": "Keep your next book close", "summary": "Simple ways to make picking up a book the easy choice.", "readMinutes": 3, "thumbnail": "📖" },
+      { "id": "common-mistakes", "category": "Common mistakes", "title": "Choose books for you", "summary": "Let go of reading rules that make the habit feel like homework.", "readMinutes": 4, "thumbnail": "✨" }
+    ]
+  },
+  "drinking-water": {
+    "tool": "water",
+    "tip": "Pair a glass of water with a routine you already do.",
+    "quote": "Small acts of care add up throughout the day.",
+    "articles": [
+      { "id": "getting-started", "category": "Getting started", "title": "Create a hydration routine", "summary": "Make drinking water visible, convenient, and easy to remember.", "readMinutes": 4, "thumbnail": "💧" },
+      { "id": "science-benefits", "category": "Science and benefits", "title": "Understanding everyday hydration", "summary": "A simple guide to paying attention to your body's needs.", "readMinutes": 5, "thumbnail": "🥤" },
+      { "id": "stay-consistent", "category": "Tips to stay consistent", "title": "Keep water within reach", "summary": "Use reminders and daily cues to support steady hydration.", "readMinutes": 3, "thumbnail": "🚰" },
+      { "id": "common-mistakes", "category": "Common mistakes", "title": "Skip the one-size-fits-all rule", "summary": "Build a routine that works for your day and your own needs.", "readMinutes": 4, "thumbnail": "🌿" }
+    ]
+  },
+  "meditation": {
+    "tool": "meditation",
+    "tip": "One quiet minute still counts as a moment of practice.",
+    "quote": "You can always return to this breath.",
+    "articles": [
+      { "id": "getting-started", "category": "Getting started", "title": "Try a one-minute meditation", "summary": "A gentle introduction that does not require special equipment.", "readMinutes": 4, "thumbnail": "🧘" },
+      { "id": "science-benefits", "category": "Science and benefits", "title": "What a mindful pause can offer", "summary": "Explore the everyday value of slowing down and noticing.", "readMinutes": 5, "thumbnail": "🌤️" },
+      { "id": "stay-consistent", "category": "Tips to stay consistent", "title": "Find a calm moment in your day", "summary": "Attach a short practice to a routine you already have.", "readMinutes": 3, "thumbnail": "🌿" },
+      { "id": "common-mistakes", "category": "Common mistakes", "title": "Thoughts are part of practice", "summary": "You do not need to clear your mind to begin meditating.", "readMinutes": 4, "thumbnail": "💭" }
+    ]
+  },
+  "sleeping-early": {
+    "tool": "sleep",
+    "tip": "Try moving bedtime earlier by just ten minutes this week.",
+    "quote": "Rest is part of the work, too.",
+    "articles": [
+      { "id": "getting-started", "category": "Getting started", "title": "Build a gentle bedtime routine", "summary": "Choose a wind-down cue that feels realistic for your evenings.", "readMinutes": 4, "thumbnail": "🌙" },
+      { "id": "science-benefits", "category": "Science and benefits", "title": "Why a steady sleep schedule helps", "summary": "Learn how regular routines can support restorative rest.", "readMinutes": 5, "thumbnail": "😴" },
+      { "id": "stay-consistent", "category": "Tips to stay consistent", "title": "Make evenings a little calmer", "summary": "A few small environmental changes can make winding down easier.", "readMinutes": 3, "thumbnail": "🛏️" },
+      { "id": "common-mistakes", "category": "Common mistakes", "title": "Be kind on imperfect nights", "summary": "A late night is a chance to restart, not a reason to give up.", "readMinutes": 4, "thumbnail": "✨" }
+    ]
+  },
+  "studying": {
+    "tool": "study",
+    "tip": "Decide on one small, specific task before you sit down.",
+    "quote": "Progress is built one focused session at a time.",
+    "articles": [
+      { "id": "getting-started", "category": "Getting started", "title": "Start with a focused study block", "summary": "Turn a broad subject into one clear next step.", "readMinutes": 4, "thumbnail": "✏️" },
+      { "id": "science-benefits", "category": "Science and benefits", "title": "Why breaks belong in studying", "summary": "Use short pauses to make focused work more sustainable.", "readMinutes": 5, "thumbnail": "🧠" },
+      { "id": "stay-consistent", "category": "Tips to stay consistent", "title": "Set up your study space", "summary": "Reduce distractions and make your materials easy to reach.", "readMinutes": 3, "thumbnail": "📓" },
+      { "id": "common-mistakes", "category": "Common mistakes", "title": "Study smarter, not endlessly", "summary": "A clear stopping point can be more useful than a marathon.", "readMinutes": 4, "thumbnail": "🎯" }
+    ]
+  },
+  "no-social-media": {
+    "tool": "clean",
+    "tip": "Move the tempting app off your home screen for today.",
+    "quote": "Your attention is yours to spend with intention.",
+    "articles": [
+      { "id": "getting-started", "category": "Getting started", "title": "Choose a screen-time boundary", "summary": "Make your goal specific, supportive, and personal to you.", "readMinutes": 4, "thumbnail": "📵" },
+      { "id": "science-benefits", "category": "Science and benefits", "title": "Take back a little attention", "summary": "Notice what changes when you create space from scrolling.", "readMinutes": 5, "thumbnail": "🧠" },
+      { "id": "stay-consistent", "category": "Tips to stay consistent", "title": "Make your phone less tempting", "summary": "Try small settings changes that reduce automatic checking.", "readMinutes": 3, "thumbnail": "🔕" },
+      { "id": "common-mistakes", "category": "Common mistakes", "title": "A slip is information, not failure", "summary": "Use setbacks to adjust your environment with compassion.", "readMinutes": 4, "thumbnail": "🌱" }
+    ]
+  },
+  "no-sugar": {
+    "tool": "clean",
+    "tip": "Focus on the choice you want to make next, not perfection.",
+    "quote": "Care for yourself in ways that feel kind and sustainable.",
+    "articles": [
+      { "id": "getting-started", "category": "Getting started", "title": "Set a thoughtful food goal", "summary": "Make a flexible plan that supports your wellbeing and preferences.", "readMinutes": 4, "thumbnail": "🍓" },
+      { "id": "science-benefits", "category": "Science and benefits", "title": "Get curious about your routines", "summary": "Notice patterns without judgment and decide what serves you.", "readMinutes": 5, "thumbnail": "🍎" },
+      { "id": "stay-consistent", "category": "Tips to stay consistent", "title": "Plan for the moments that feel hard", "summary": "Prepare a few options that make your intentions easier to follow.", "readMinutes": 3, "thumbnail": "🌿" },
+      { "id": "common-mistakes", "category": "Common mistakes", "title": "Let go of all-or-nothing thinking", "summary": "A flexible approach can be more supportive than strict rules.", "readMinutes": 4, "thumbnail": "💜" }
+    ]
+  },
+  "journaling": {
+    "tool": "journal",
+    "tip": "Write just one sentence about what you noticed today.",
+    "quote": "A page is a place to begin, not a place to be perfect.",
+    "articles": [
+      { "id": "getting-started", "category": "Getting started", "title": "Start journaling in five minutes", "summary": "Use a simple prompt to make a blank page less intimidating.", "readMinutes": 4, "thumbnail": "📓" },
+      { "id": "science-benefits", "category": "Science and benefits", "title": "The value of reflecting on your day", "summary": "Explore how writing can help you notice thoughts and patterns.", "readMinutes": 5, "thumbnail": "🖊️" },
+      { "id": "stay-consistent", "category": "Tips to stay consistent", "title": "Keep your journal easy to reach", "summary": "A small cue can help make reflection part of your routine.", "readMinutes": 3, "thumbnail": "✨" },
+      { "id": "common-mistakes", "category": "Common mistakes", "title": "There is no wrong way to journal", "summary": "You can write lists, fragments, questions, or whatever feels useful.", "readMinutes": 4, "thumbnail": "💭" }
+    ]
+  },
+  "learning-a-language": {
+    "tool": "study",
+    "tip": "Practice one useful phrase out loud today.",
+    "quote": "Every new word is a small bridge to another world.",
+    "articles": [
+      { "id": "getting-started", "category": "Getting started", "title": "Make language practice approachable", "summary": "Start with short, useful sessions that fit into your day.", "readMinutes": 4, "thumbnail": "🌎" },
+      { "id": "science-benefits", "category": "Science and benefits", "title": "Learn through repetition and context", "summary": "Build useful recall by revisiting words in meaningful ways.", "readMinutes": 5, "thumbnail": "🧠" },
+      { "id": "stay-consistent", "category": "Tips to stay consistent", "title": "Practice a little every day", "summary": "Connect practice to a daily cue and keep materials close.", "readMinutes": 3, "thumbnail": "🗣️" },
+      { "id": "common-mistakes", "category": "Common mistakes", "title": "Let yourself make mistakes", "summary": "Trying, forgetting, and trying again are all part of learning.", "readMinutes": 4, "thumbnail": "🌱" }
+    ]
+  },
+  "praying": {
+    "tool": "meditation",
+    "tip": "Choose a regular moment that already feels peaceful to you.",
+    "quote": "Make a little room for what grounds you.",
+    "articles": [
+      { "id": "getting-started", "category": "Getting started", "title": "Create a prayerful daily pause", "summary": "Find a gentle routine that fits your beliefs and your day.", "readMinutes": 4, "thumbnail": "🙏" },
+      { "id": "science-benefits", "category": "Science and benefits", "title": "Make space for reflection", "summary": "Explore the grounding value of a regular reflective practice.", "readMinutes": 5, "thumbnail": "🕊️" },
+      { "id": "stay-consistent", "category": "Tips to stay consistent", "title": "Choose a meaningful daily cue", "summary": "Let an existing transition remind you to take a quiet moment.", "readMinutes": 3, "thumbnail": "🌤️" },
+      { "id": "common-mistakes", "category": "Common mistakes", "title": "Keep your practice personal", "summary": "A meaningful habit does not need to look the same for everyone.", "readMinutes": 4, "thumbnail": "💜" }
+    ]
+  },
+  "saving-money": {
+    "tool": "saving",
+    "tip": "Celebrate setting aside any amount that works for you.",
+    "quote": "Small, steady choices can make room for bigger plans.",
+    "articles": [
+      { "id": "getting-started", "category": "Getting started", "title": "Set a savings goal that fits", "summary": "Start with a clear purpose and an amount that feels manageable.", "readMinutes": 4, "thumbnail": "🐷" },
+      { "id": "science-benefits", "category": "Science and benefits", "title": "Why small savings add up", "summary": "See how steady contributions can build momentum over time.", "readMinutes": 5, "thumbnail": "💰" },
+      { "id": "stay-consistent", "category": "Tips to stay consistent", "title": "Make saving part of payday", "summary": "Use a regular cue to remember your savings intention.", "readMinutes": 3, "thumbnail": "📈" },
+      { "id": "common-mistakes", "category": "Common mistakes", "title": "Keep your plan flexible", "summary": "Adjust goals when life changes; progress is not all-or-nothing.", "readMinutes": 4, "thumbnail": "🌱" }
+    ]
+  },
+  "custom": {
+    "tool": "generic",
+    "tip": "Make the next step so small that it is easy to begin.",
+    "quote": "Your routine, your pace, your progress.",
+    "articles": [
+      { "id": "getting-started", "category": "Getting started", "title": "Make a habit easy to begin", "summary": "Choose a clear cue and a first step you can repeat.", "readMinutes": 4, "thumbnail": "🌱" },
+      { "id": "science-benefits", "category": "Science and benefits", "title": "How repetition builds a routine", "summary": "Small repeated actions can become easier to return to over time.", "readMinutes": 5, "thumbnail": "🧠" },
+      { "id": "stay-consistent", "category": "Tips to stay consistent", "title": "Design a helpful reminder", "summary": "Connect your habit to a moment that already happens each day.", "readMinutes": 3, "thumbnail": "🎯" },
+      { "id": "common-mistakes", "category": "Common mistakes", "title": "Restart without guilt", "summary": "A pause does not undo your effort; begin again with one small step.", "readMinutes": 4, "thumbnail": "✨" }
+    ]
+  }
+}

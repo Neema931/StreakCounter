@@ -1,0 +1,26 @@
+.habit-articles__tip { display: flex; align-items: flex-start; gap: 12px; margin: -20px -20px 20px; padding: 16px 20px; border-radius: var(--radius) var(--radius) 0 0; background: var(--lavender-light); }
+.habit-articles__tip > span { display: grid; width: 30px; height: 30px; flex: 0 0 auto; place-items: center; border-radius: 50%; color: var(--lavender-dark); background: white; }
+.habit-articles__tip small { color: var(--lavender-dark); font-size: 0.62rem; font-weight: 900; letter-spacing: 0.12em; }
+.habit-articles__tip p { margin: 4px 0 0; font-size: 0.76rem; line-height: 1.5; }
+.habit-articles__grid { display: grid; gap: 12px; margin-top: 16px; }
+.habit-article-card { display: grid; grid-template-columns: 58px 1fr; align-items: start; gap: 5px 12px; padding: 13px; border: 1px solid var(--lavender-light); border-radius: 14px; }
+.habit-article-card__thumb { display: grid; width: 58px; height: 58px; grid-row: span 4; place-items: center; border-radius: 13px; background: var(--lavender-light); font-size: 1.55rem; }
+.habit-article-card__category { color: var(--lavender-dark); font-size: 0.62rem; font-weight: 900; }
+.habit-article-card h3 { margin: 0; font-size: 0.84rem; line-height: 1.35; }
+.habit-article-card > p { margin: 0; color: var(--gray); font-size: 0.71rem; line-height: 1.45; }
+.habit-article-card > div:last-child { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.habit-article-card small { color: var(--gray); font-size: 0.64rem; }
+.habit-article-card button { padding: 4px 0; border: 0; color: var(--lavender-dark); background: transparent; font-size: 0.7rem; font-weight: 900; cursor: pointer; }
+.habit-article-modal-backdrop { position: fixed; z-index: 50; inset: 0; display: grid; place-items: center; padding: 20px; background: rgb(17 17 17 / 55%); }
+.habit-article-modal { position: relative; width: min(100%, 520px); max-height: 90vh; overflow: auto; padding: 28px; border-radius: 22px; background: var(--white); box-shadow: var(--shadow); }
+.habit-article-modal__close { position: absolute; top: 14px; right: 14px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: var(--lavender-light); font-size: 1.3rem; }
+.habit-article-modal__thumb { display: grid; width: 58px; height: 58px; place-items: center; margin-bottom: 18px; border-radius: 16px; background: var(--lavender-light); font-size: 1.8rem; }
+.habit-article-modal h2 { margin: 0 0 12px; font-size: 1.45rem; }
+.habit-article-modal p:not(.habit-detail-eyebrow) { color: var(--gray); font-size: 0.86rem; line-height: 1.65; }
+.habit-article-modal__done { padding: 11px 16px; border: 0; border-radius: 999px; background: var(--lavender); font-weight: 800; }
+@media (min-width: 600px) {
+  .habit-articles__tip { margin: -24px -24px 24px; padding: 18px 24px; }
+  .habit-articles__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .habit-article-card { grid-template-columns: 1fr; }
+  .habit-article-card__thumb { grid-row: auto; }
+}

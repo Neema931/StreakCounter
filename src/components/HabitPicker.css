@@ -1,0 +1,349 @@
+.habit-picker__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.habit-picker__card,
+.habit-picker__custom-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 145px;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid #E9E6F2;
+  border-radius: var(--radius);
+  background: var(--lavender-light);
+}
+
+.habit-picker__card {
+  text-align: center;
+  box-shadow: 0 4px 14px rgb(139 115 224 / 7%);
+  transition: all 0.2s ease;
+}
+
+.habit-picker__card:hover {
+  transform: translateY(-2px);
+  border-color: var(--lavender);
+  box-shadow: var(--shadow);
+}
+
+.habit-picker__card.is-added {
+  border: 2px solid var(--lavender-dark);
+  background: #F2EDFF;
+  box-shadow: 0 5px 16px rgb(139 115 224 / 15%);
+}
+
+.habit-picker__icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  margin-bottom: 10px;
+  border-radius: 17px;
+  background: rgb(255 255 255 / 75%);
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.habit-picker__name {
+  flex: 1;
+  color: #111111;
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.habit-picker__selected-badge {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  display: grid;
+  width: 23px;
+  height: 23px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--white);
+  background: var(--lavender-dark);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.habit-picker__add {
+  min-width: 58px;
+  min-height: 30px;
+  margin-top: 10px;
+  padding: 4px 12px;
+  border: 1px solid var(--lavender);
+  border-radius: 999px;
+  color: var(--black);
+  background: var(--white);
+  font-size: 0.75rem;
+  font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+.habit-picker__add:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: var(--lavender-light);
+}
+
+.habit-picker__add:disabled {
+  cursor: default;
+}
+
+.habit-picker__card.is-added .habit-picker__add {
+  border-color: var(--lavender-light);
+  background: var(--lavender-light);
+}
+
+.habit-picker__custom-card {
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1.5px dashed var(--lavender-dark);
+  color: var(--lavender-dark);
+  background: var(--white);
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.habit-picker__custom-card > span:first-child {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--lavender-light);
+  font-size: 1.5rem;
+}
+
+.habit-picker__custom-card:hover {
+  transform: translateY(-2px);
+  background: var(--lavender-light);
+}
+
+.habit-modal__backdrop {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(17 17 17 / 55%);
+}
+
+.habit-modal {
+  position: relative;
+  width: min(100%, 440px);
+  max-height: min(90vh, 760px);
+  overflow: auto;
+  padding: 28px 22px 22px;
+  border: 1px solid rgb(139 115 224 / 18%);
+  border-radius: 24px;
+  background: var(--white);
+  box-shadow: 0 20px 70px rgb(17 17 17 / 20%);
+  animation: habit-modal-enter 180ms ease-out both;
+}
+
+.habit-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 15px;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: var(--gray);
+  background: var(--lavender-light);
+  font-size: 1.45rem;
+  cursor: pointer;
+}
+
+.habit-modal h2 {
+  margin-bottom: 20px;
+  font-size: 1.45rem;
+}
+
+.habit-modal__label {
+  display: block;
+  margin: 0 0 8px;
+  color: var(--black);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.habit-modal__input {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 20px;
+  padding: 0 14px;
+  border: 1px solid #E9E6F2;
+  border-radius: 12px;
+  outline: none;
+  color: var(--black);
+  background: var(--white);
+  transition: all 0.2s ease;
+}
+
+.habit-modal__input:focus {
+  border-color: var(--lavender-dark);
+  box-shadow: 0 0 0 3px rgb(139 115 224 / 14%);
+}
+
+.habit-modal__icon-picker,
+.habit-modal__frequency {
+  min-width: 0;
+  margin: 0 0 19px;
+  padding: 0;
+  border: 0;
+}
+
+.habit-modal__icon-picker legend,
+.habit-modal__frequency legend {
+  padding: 0;
+}
+
+.habit-modal__icons {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 7px;
+}
+
+.habit-modal__icon-choice {
+  position: relative;
+  display: grid;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid #E9E6F2;
+  border-radius: 11px;
+  background: var(--white);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.habit-modal__icon-choice:has(input:checked) {
+  border-color: var(--lavender-dark);
+  background: var(--lavender-light);
+}
+
+.habit-modal__icon-choice input,
+.habit-modal__frequency-option input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.habit-modal__icon-choice:focus-within,
+.habit-modal__frequency-option:focus-within {
+  outline: 3px solid rgb(139 115 224 / 35%);
+  outline-offset: 2px;
+}
+
+.habit-modal__frequencies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.habit-modal__frequency-option {
+  position: relative;
+  display: grid;
+  min-height: 43px;
+  place-items: center;
+  border: 1px solid #E9E6F2;
+  border-radius: 12px;
+  color: var(--gray);
+  background: var(--white);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.habit-modal__frequency-option:has(input:checked) {
+  border-color: var(--lavender-dark);
+  color: var(--black);
+  background: var(--lavender-light);
+}
+
+.habit-modal__error {
+  margin: -5px 0 14px;
+  color: #B13C49;
+  font-size: 0.82rem;
+}
+
+.habit-modal__submit {
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--black);
+  background: var(--lavender);
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.habit-modal__submit {
+  color: var(--black);
+  background: var(--lavender);
+}
+
+.habit-modal__submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: var(--lavender-dark);
+}
+
+.habit-modal__submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+@keyframes habit-modal-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (min-width: 600px) {
+  .habit-picker__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .habit-picker__card,
+  .habit-picker__custom-card {
+    min-height: 154px;
+    padding: 17px;
+  }
+
+  .habit-modal {
+    padding: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .habit-picker__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .habit-modal {
+    animation: none;
+  }
+}

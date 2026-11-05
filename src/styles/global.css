@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --lavender: #B9A7F5;
+  --lavender-light: #E9E2FD;
+  --lavender-dark: #8B73E0;
+  --white: #FFFFFF;
+  --black: #111111;
+  --gray: #6B6B7B;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(139,115,224,0.18);
+  --font-display: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --color-ink: var(--black);
+  --color-muted: var(--gray);
+  --color-green: var(--lavender-dark);
+  --color-light-green: var(--lavender-light);
+  --color-paper: var(--white);
+  --color-border: #E9E6F2;
+
+  font-family: var(--font-display);
+  color: var(--black);
+  background: var(--white);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--black);
+  background: var(--white);
+}
+
+button,
+input,
+a,
+.habit-option {
+  font: inherit;
+  transition: all 0.2s ease;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
+  color: var(--black);
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+
+h2 {
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+  letter-spacing: -0.035em;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  color: var(--lavender-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.card {
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

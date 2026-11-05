@@ -1,0 +1,215 @@
+.navbar {
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 max(5vw, calc((100vw - 1180px) / 2));
+  border-bottom: 1px solid #E9E6F2;
+  background: rgb(255 255 255 / 94%);
+}
+
+.navbar__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--black);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+}
+
+.navbar__mark {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  place-items: center;
+  padding: 7px;
+  color: var(--lavender-dark);
+  fill: currentColor;
+}
+
+.navbar__user-menu {
+  position: relative;
+}
+
+.navbar__mobile-tabs {
+  display: none;
+}
+
+.navbar__user-trigger {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 9px;
+  padding: 4px 8px 4px 4px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--black);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navbar__user-trigger:hover,
+.navbar__user-trigger[aria-expanded='true'] {
+  border-color: var(--lavender-light);
+  background: #FBFAFF;
+}
+
+.navbar__name {
+  max-width: 150px;
+  overflow: hidden;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.navbar__chevron {
+  color: var(--gray);
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.navbar__chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.navbar__dropdown {
+  position: absolute;
+  top: calc(100% + 9px);
+  right: 0;
+  display: grid;
+  width: 175px;
+  padding: 6px;
+  border: 1px solid #E9E6F2;
+  border-radius: 14px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  animation: navbar-dropdown-in 150ms ease-out both;
+}
+
+.navbar__dropdown a,
+.navbar__dropdown button {
+  display: block;
+  width: 100%;
+  padding: 11px 12px;
+  border: 0;
+  border-radius: 9px;
+  color: var(--black);
+  background: transparent;
+  text-align: left;
+  text-decoration: none;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.navbar__dropdown a:hover,
+.navbar__dropdown button:hover {
+  background: var(--lavender-light);
+}
+
+@keyframes navbar-dropdown-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    position: fixed;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 68px;
+    justify-content: center;
+    padding: 5px 12px max(5px, env(safe-area-inset-bottom));
+    border-top: 1px solid #E9E6F2;
+    border-bottom: 0;
+    background: rgb(255 255 255 / 97%);
+    box-shadow: 0 -5px 18px rgb(139 115 224 / 9%);
+  }
+
+  .navbar__brand,
+  .navbar__user-trigger {
+    display: none;
+  }
+
+  .navbar__user-menu {
+    position: static;
+  }
+
+  .navbar__mobile-tabs {
+    display: grid;
+    width: 100%;
+    max-width: 360px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .navbar__mobile-tabs a,
+  .navbar__mobile-tabs button {
+    display: flex;
+    min-height: 52px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    border: 0;
+    border-radius: 12px;
+    color: var(--gray);
+    background: transparent;
+    text-decoration: none;
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 800;
+  }
+
+  .navbar__mobile-tabs a:hover,
+  .navbar__mobile-tabs button:hover {
+    color: var(--lavender-dark);
+    background: var(--lavender-light);
+  }
+
+  .navbar__mobile-tabs a > span:first-child {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .navbar__mobile-tabs .avatar {
+    width: 24px;
+    height: 24px;
+    font-size: 0.62rem;
+  }
+
+  .navbar__dropdown {
+    position: fixed;
+    top: auto;
+    right: 12px;
+    bottom: calc(76px + env(safe-area-inset-bottom));
+  }
+
+  .navbar__name {
+    max-width: 90px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar__dropdown {
+    animation: none;
+  }
+}

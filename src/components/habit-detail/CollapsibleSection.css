@@ -1,0 +1,15 @@
+.habit-detail-section { min-width: 0; }
+.habit-detail-section > summary { display: flex; min-height: 46px; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 14px; border: 1px solid var(--lavender-light); border-radius: 14px; color: var(--black); background: var(--white); font-size: 0.82rem; font-weight: 900; cursor: pointer; list-style: none; }
+.habit-detail-section > summary::-webkit-details-marker { display: none; }
+.habit-detail-section > summary::marker { content: ''; }
+.habit-detail-section__chevron { color: var(--lavender-dark); font-size: 1.15rem; transition: transform 0.2s ease; }
+.habit-detail-section[open] > summary { margin-bottom: 12px; }
+.habit-detail-section[open] > summary .habit-detail-section__chevron { transform: rotate(180deg); }
+.habit-detail-section > .habit-panel > .habit-panel__heading { display: none; }
+@media (min-width: 1024px) {
+  .habit-detail-section > summary { min-height: 0; padding: 0 0 10px; border: 0; background: transparent; }
+  .habit-detail-section[open] > summary { margin-bottom: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .habit-detail-section__chevron { transition: none; }
+}

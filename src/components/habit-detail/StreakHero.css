@@ -1,0 +1,146 @@
+.habit-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(22px, 4vw, 36px);
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--lavender-light), var(--lavender) 78%);
+  box-shadow: var(--shadow);
+}
+
+.habit-hero__headline {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.habit-hero__flame {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  place-items: center;
+  border-radius: 24px;
+  background: rgb(255 255 255 / 62%);
+  font-size: 2.8rem;
+  animation: habit-flame 1.8s ease-in-out infinite;
+}
+
+.habit-hero__headline h2 {
+  margin: 0;
+  font-size: clamp(2.4rem, 8vw, 3.8rem);
+  letter-spacing: -0.07em;
+  line-height: 1;
+}
+
+.habit-hero__headline h2 span {
+  font-size: 0.35em;
+  letter-spacing: 0;
+}
+
+.habit-detail-eyebrow {
+  margin: 0 0 8px;
+  color: var(--lavender-dark);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.habit-hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 25px 0 20px;
+}
+
+.habit-hero__stats > div {
+  display: grid;
+  min-height: 66px;
+  align-content: center;
+  gap: 3px;
+  padding: 10px;
+  border-radius: 14px;
+  background: rgb(255 255 255 / 63%);
+}
+
+.habit-hero__stats strong {
+  font-size: 1.08rem;
+}
+
+.habit-hero__stats span {
+  color: var(--gray);
+  font-size: 0.65rem;
+  line-height: 1.25;
+}
+
+.habit-hero__checkin {
+  width: 100%;
+  min-height: 50px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--black);
+  background: var(--white);
+  font-size: 0.9rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.habit-hero__checkin:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgb(17 17 17 / 12%);
+}
+
+.habit-hero__checkin.is-done,
+.habit-hero__checkin:disabled {
+  color: var(--white);
+  background: var(--black);
+  cursor: default;
+}
+
+.habit-hero__undo {
+  display: block;
+  margin: 12px auto 0;
+  padding: 5px 10px;
+  border: 0;
+  color: var(--black);
+  background: transparent;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.habit-hero__confetti {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.habit-hero__confetti span {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  color: var(--lavender-dark);
+  font-size: 1.6rem;
+  animation: habit-confetti 1.3s ease-out both;
+  animation-delay: calc(var(--confetti-index) * 35ms);
+}
+
+@keyframes habit-flame {
+  50% { transform: translateY(-4px) rotate(3deg); }
+}
+
+@keyframes habit-confetti {
+  to { opacity: 0; transform: translate(calc((var(--confetti-index) - 2.5) * 35px), -75px) rotate(100deg); }
+}
+
+@media (max-width: 400px) {
+  .habit-hero__stats { gap: 5px; }
+  .habit-hero__stats > div { padding: 8px 6px; }
+  .habit-hero__stats span { font-size: 0.6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .habit-hero__flame,
+  .habit-hero__confetti span { animation: none; }
+}

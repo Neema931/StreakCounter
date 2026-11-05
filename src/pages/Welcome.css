@@ -1,0 +1,215 @@
+.welcome-page {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  place-items: center;
+  padding: 72px 22px 36px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 42%, var(--lavender-light) 0, rgb(233 226 253 / 38%) 28%, transparent 58%),
+    var(--white);
+  text-align: center;
+}
+
+.welcome-page__skip {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.welcome-page__skip:hover {
+  color: var(--lavender-dark);
+  background: var(--lavender-light);
+}
+
+.welcome-page__content {
+  display: flex;
+  width: min(100%, 520px);
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome-page__speech {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-width: min(260px, 85vw);
+  min-height: 72px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  padding: 14px 28px;
+  border: 2px solid var(--black);
+  border-radius: 24px;
+  color: var(--black);
+  background: var(--white);
+  box-shadow: 5px 5px 0 var(--lavender);
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 6vw, 1.8rem);
+  font-weight: 800;
+  animation: welcome-pop-in 480ms cubic-bezier(0.18, 0.89, 0.32, 1.28) both;
+}
+
+.welcome-page__speech::after {
+  position: absolute;
+  bottom: -11px;
+  left: calc(50% - 9px);
+  width: 18px;
+  height: 18px;
+  border-right: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
+  background: var(--white);
+  content: '';
+  transform: rotate(45deg);
+}
+
+.welcome-page__cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  background: var(--lavender-dark);
+  vertical-align: -0.12em;
+  animation: welcome-cursor-blink 750ms steps(2, start) infinite;
+}
+
+.welcome-page__character-wrap {
+  display: grid;
+  width: min(78vw, 330px);
+  min-height: 300px;
+  place-items: center;
+  margin-top: 16px;
+  animation: welcome-character-bounce 2.8s ease-in-out infinite;
+  transform-origin: 50% 100%;
+}
+
+.welcome-character {
+  display: block;
+  width: 100%;
+  max-height: 330px;
+  overflow: visible;
+}
+
+.welcome-character--mascot {
+  width: 90%;
+}
+
+.welcome-page__note {
+  margin: 4px 0 0;
+  color: var(--gray);
+  font-size: 0.96rem;
+}
+
+.welcome-page__action-slot {
+  display: grid;
+  min-height: 72px;
+  place-items: center;
+  margin-top: 18px;
+}
+
+.welcome-page__continue {
+  display: inline-flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 26px;
+  border: 1px solid var(--lavender-dark);
+  border-radius: 999px;
+  color: var(--black);
+  background: var(--lavender);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  font-size: 0.96rem;
+  font-weight: 800;
+  animation: welcome-action-in 420ms ease-out both;
+  transition: all 0.2s ease;
+}
+
+.welcome-page__continue:hover {
+  transform: translateY(-2px);
+  background: var(--lavender-dark);
+}
+
+.welcome-page__continue:focus-visible,
+.welcome-page__skip:focus-visible {
+  outline: 3px solid var(--lavender-dark);
+  outline-offset: 3px;
+}
+
+@keyframes welcome-pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.55);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes welcome-character-bounce {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  28% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+  58% {
+    transform: translateY(0) rotate(1deg);
+  }
+  72% {
+    transform: translateY(-4px) rotate(0);
+  }
+}
+
+@keyframes welcome-cursor-blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes welcome-action-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 600px) {
+  .welcome-page {
+    padding: 76px 32px 48px;
+  }
+
+  .welcome-page__character-wrap {
+    min-height: 340px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .welcome-page__character-wrap {
+    width: 350px;
+    min-height: 355px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-page__speech,
+  .welcome-page__character-wrap,
+  .welcome-page__continue,
+  .welcome-page__cursor {
+    animation: none;
+  }
+}
